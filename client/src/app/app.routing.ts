@@ -3,12 +3,36 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
+import { LoginComponent } from './views/login/login.component';
+import { LandingComponent } from './views/landing/landing.component';
+import { RegisterComponent } from './views/register/register.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'landing',
     pathMatch: 'full',
+  },
+  {
+    path: 'landing',
+    component: LandingComponent,
+    data: {
+      title: 'Landing Page'
+    }
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: {
+      title: 'Login Page'
+    }
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    data: {
+      title: 'Register Page'
+    }
   },
   {
     path: '',

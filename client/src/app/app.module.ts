@@ -57,10 +57,10 @@ import { ChartsModule } from 'ng2-charts';
     AppComponent,
     ...APP_CONTAINERS
   ],
-  providers: [{
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
+//  providers: [{
+    //provide: LocationStrategy,
+    // useClass: HashLocationStrategy
+//  }],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
