@@ -17,6 +17,8 @@ import { AppComponent } from './app.component';
 // Import containers
 import { DefaultLayoutComponent } from './containers';
 
+import { LoginComponent } from './views/login/login.component';
+
 const APP_CONTAINERS = [
   DefaultLayoutComponent
 ];
@@ -36,6 +38,7 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -43,6 +46,7 @@ import { ChartsModule } from 'ng2-charts';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
     AppFooterModule,
@@ -55,7 +59,8 @@ import { ChartsModule } from 'ng2-charts';
   ],
   declarations: [
     AppComponent,
-    ...APP_CONTAINERS
+    ...APP_CONTAINERS,
+    LoginComponent
   ],
 //  providers: [{
     //provide: LocationStrategy,

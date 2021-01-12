@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { AccountService } from '../../_services/account.service';
 
 @Component({
   templateUrl: 'dashboard.component.html'
@@ -10,8 +11,9 @@ export class DashboardComponent implements OnInit {
 
   title = "The Dating App";
   users: any;
-  constructor(private http: HttpClient) {
-
+  private loggedIn = false;
+  constructor(private http: HttpClient, private accountService: AccountService) {
+    this.loggedIn = this.accountService.loggedIn;
   }
 
   ngOnInit(): void {
